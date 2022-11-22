@@ -44,14 +44,14 @@ class clienteController extends Controller
      */
     public function store(Request $request)
     {
+        error_log("hola");
         $cliente=new cliente;
-        $cliente->Id_cliente=request->input('Id_cliente');
-        $cliente->Codigo_cliente=request->input('Codigo_cliente');
-        $cliente->Nombre=request->input('Nombre');
-        $cliente->Apellido=request->input('Apellido');
-        $cliente->Direccion=request->input('Direccion');
-        $cliente->Telefono=request->input('Telefono');
-        $cliente->Correo=request->input('Correo');
+        $cliente->Codigo_cliente=$request->input('Codigo_cliente');
+        $cliente->Nombre=$request->input('Nombre');
+        $cliente->Apellido=$request->input('Apellido');
+        $cliente->Direccion=$request->input('Direccion');
+        $cliente->Telefono=$request->input('Telefono');
+        $cliente->Correo=$request->input('Correo');
         $cliente->save();
         return redirect()->route('cliente.index');
     }

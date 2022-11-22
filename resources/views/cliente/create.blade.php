@@ -12,38 +12,40 @@
         <h4>Crear Usuario</h4>
         <div class="row">
             <div class="col-xl-12">
-                <form action="{{route('cliente.store')}}"></form>
-               
-                <div class="form-group">
-                    <label for="Codigo_cliente">Codigo cliente</label>
-                    <input type="text" class="form-control" name ="Codigo_cliente" require maxlength="50">
-                </div>
-                <div class="form-group">
-                    <label for="Nombre">Nombre</label>
-                    <input type="text" class="form-control" name ="Nombre" require maxlength="50">
-                </div>
-                <div class="form-group">
-                    <label for="Apellido">Apellido</label>
-                    <input type="text" class="form-control" name ="Apellido" require maxlength="50">
-                </div>
-                <div class="form-group">
-                    <label for="Direccion">Direccion</label>
-                    <input type="text" class="form-control" name ="Direccion" require maxlength="50">
-                </div>
-                <div class="form-group">
-                    <label for="Telefono">Telefono</label>
-                    <input type="text" class="form-control" name ="Telefono" require maxlength="50">
-                </div>
-                <div class="form-group">
-                    <label for="Correo">Correo</label>
-                    <input type="text" class="form-control" name ="Correo" require maxlength="50">
-                </div>
-                <div class="form-grup">
-                <input type="submit" class="btn btn-primary" value="Guardar">
-                <input type="reset" class="btn btn-default" value="Cancelar">
-                <a href="javascript:history.back()">ir al listado</a>
-                </div>
 
+                <form action="{{route('cliente.store')}}" method="post">
+                    @csrf 
+                    <div class="form-group">
+                        <label for="Codigo_cliente">Codigo cliente</label>
+                        <input type="text" class="form-control" name ="Codigo_cliente" require maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" class="form-control" name ="Nombre" require maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" class="form-control" name ="Apellido" require maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="Direccion">Direccion</label>
+                        <input type="text" class="form-control" name ="Direccion" require maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="Telefono">Telefono</label>
+                        <input type="text" class="form-control" name ="Telefono" require maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="Correo">Correo</label>
+                        <input type="text" class="form-control" name ="Correo" require maxlength="50">
+                    </div>
+                    <div class="form-grup">
+                        <input type="submit" class="btn btn-primary" value="Guardar">
+                        <input type="reset" class="btn btn-default" value="Cancelar">
+                        <a href="javascript:history.back()">ir al listado</a>
+                    </div>
+                </form>
+            
             </div>
         </div>
     </div>
